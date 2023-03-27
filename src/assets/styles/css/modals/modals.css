@@ -1,0 +1,55 @@
+div.modal-content *::-webkit-scrollbar {
+    width: 2.5px;
+    height: 2.5px;
+}
+
+div.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: border-box;
+    border: 1px solid var(--cl-gray-02);
+    border-radius: 10px;
+    background-color: var(--cl-gray-00);
+}
+
+div.modal-content button.closed {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background-color: var(--cl-gray-01);
+    z-index: 1000;
+}
+
+div.modal-content button.closed:hover {
+    color: var(--filter-danger);
+    background-color: var(--cl-gray-03);
+}
+
+div.modal-footer {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+@media (min-width: 993px) {
+    .modal-dialog {
+        max-width: 780px;
+    }
+}
+
+@media (max-width: 992px) {
+    .modal-dialog {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 550px;
+    }
+}

@@ -1,0 +1,32 @@
+nav.container-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: calc(100vh - var(--header-height));
+    width: var(--sidebar-width);
+    padding: 10px;
+    border-right: 1px solid var(--cl-gray-02);
+}
+
+nav.container-sidebar button.button-sidebar {
+    font-size: var(--font-xmd);
+    color: #fff;
+}
+
+nav.container-sidebar.opened button.button-sidebar {
+    background-color: #ee5f5f !important;
+}
+
+nav.container-sidebar.closed button.button-sidebar {
+    background-color: #393939 !important;
+}
+
+.opened {
+    --sidebar-width: 235px;
+    transition: 0.6s !important;
+}
+
+.closed {
+    --sidebar-width: 60px;
+    transition: 0.6s !important;
+}

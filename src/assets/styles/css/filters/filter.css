@@ -1,0 +1,38 @@
+:root {
+    --filter-default: #c4c4c4;
+    --filter-success: #05cf6e;
+    --filter-warning: #fab42d;
+    --filter-danger: #df2525;
+}
+
+:is(.filter-success, .filter-success > *) {
+    color: var(--filter-success) !important;
+}
+
+:is(.filter-warning, .filter-warning > *) {
+    color: var(--filter-warning) !important;
+}
+
+:is(.filter-danger, .filter-danger > *) {
+    color: var(--filter-danger) !important;
+}
+
+:is(.bg-filter-default, .bg-filter-default > *) {
+    color: var(--filter-default) !important;
+    background-color: transparent !important;
+}
+
+:is(.bg-filter-success, .bg-filter-success > *) {
+    color: #fff;
+    background-color: var(--filter-success) !important;
+}
+
+:is(.bg-filter-warning, .bg-filter-warning > *) {
+    color: #fff !important;
+    background-color: var(--filter-warning) !important;
+}
+
+:is(.bg-filter-danger, .bg-filter-danger > *) {
+    color: #fff;
+    background-color: var(--filter-danger) !important;
+}

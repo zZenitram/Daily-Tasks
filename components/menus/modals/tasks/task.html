@@ -1,0 +1,104 @@
+<!-- Modal -->
+<div class="modal fade" id="edit-task" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <button class="button closed" data-bs-dismiss="modal"><i class="bx bx-x"></i></button>
+
+            <div class="modal-body">
+
+                <div class="container-tilte-task">
+                    <label for="task-input-name">
+                        <i class='bx bx-dock-top'></i>
+                        <input type="text" placeholder="Name your task" id="task-input-name" ng-model="data.name">
+                    </label>
+                    <!-- <p class="form-text">in list <a href="#">In Progress</a></p> -->
+
+                    <div class="dropdown">
+
+                        <button class="button-filter-status {{data.label.color}}" data-bs-toggle="dropdown">
+                            <i class="bx bxs-circle"></i>
+                            <span>{{data.label.name}}</span>
+                            <i class="bx bxs-chevron-down"></i>
+                        </button>
+
+                        <ng-include class="dropdown-menu"
+                            src="'components/menus/dropdowns/tasks/status/status.html'"></ng-include>
+                    </div>
+                </div>
+
+                <div class="container-edit-options-task">
+
+                    <div class="container-edit-task">
+
+                        <div class="container-task-users-labels d-none">
+                            <label for="task-buttons-users">
+                                <h6>USERS</h6>
+                                <button class="button-add-task">
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </label>
+
+                            <label for="task-buttons-labels">
+                                <h6>LABELS</h6>
+                                <button class="button-add-task">
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </label>
+
+                            <label for="task-buttons-due-date">
+                                <h6>DUE DATE</h6>
+                                <button>
+                                    <input type="checkbox" name="" id="task-buttons-due-date">
+                                    <span> March 28 at 12:00 AM</span>
+                                </button>
+                            </label>
+                        </div>
+
+                        <div class="container-task-description">
+                            <label for="task-buttons-labels">
+                                <i class='bx bx-list-minus'></i>
+                                <h6>Description</h6>
+                            </label>
+                            <textarea placeholder="Add a more detailed description..." id="task-buttons-labels"
+                                cols="30" rows="7" ng-model="data.description"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="container-options-task">
+
+                        <label for="">
+                            <h6>SUGGESTED</h6>
+                            <button disabled><i class='bx bx-user'></i><span>Join</span></button>
+                        </label>
+
+                        <label for="">
+                            <h6>ADD TO TASK</h6>
+                            <button disabled><i class='bx bx-user'></i><span>Users</span></button>
+                            <button disabled><i class='bx bx-purchase-tag-alt'></i><span>Labels</span></button>
+                            <button disabled><i class='bx bx-checkbox-checked'></i><span>Checklist</span></button>
+                            <button disabled><i class='bx bx-calendar'></i></i><span>Due Date</span></button>
+                            <button disabled><i class='bx bx-paperclip'></i></i><span>Attachment</span></button>
+                            <button disabled><i class='bx bx-map'></i></i><span>Location</span></button>
+                        </label>
+
+                        <label for="">
+                            <h6>ACTIONS</h6>
+                            <button disabled><i class='bx bx-move'></i><span>Move</span></button>
+                            <button disabled><i class='bx bx-copy'></i><span>Copy</span></button>
+                            <button disabled><i class='bx bx-show'></i></i><span>Watch</span></button>
+                            <button ng-click="delete.task()" data-bs-dismiss="modal"><i
+                                    class='bx bx-trash'></i></i><span>Delete</span></button>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="button canceled" data-bs-dismiss="modal"><span>Fechar</span></button>
+                <button type="button" class="button saved" ng-click="option()" data-bs-toggle="modal"
+                    data-bs-target="#edit-task"><span>Salvar</span></button>
+            </div>
+        </div>
+    </div>
+</div>

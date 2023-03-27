@@ -1,0 +1,146 @@
+div.container-edit-options-task {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.container-tilte-task {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+div.container-tilte-task label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: var(--font-lg);
+    line-height: var(--font-lg);
+}
+
+div.container-tilte-task label input {
+    height: 35px;
+    font-weight: 600;
+    font-size: var(--font-lg);
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+div.container-tilte-task p {
+    margin-left: 35px;
+    color: var(--cl-gray-05);
+}
+
+div.container-tilte-task p a {
+    color: var(--cl-gray-06);
+}
+
+div.container-task-users-labels {
+    display: flex;
+    gap: 25px;
+    padding-left: 35px;
+}
+
+div.container-task-users-labels input[type="checkbox"] {
+    outline: none;
+    border: 1px solid var(--cl-gray-00);
+    border-radius: 5px;
+    background-color: var(--cl-gray-00);
+}
+
+div.container-options-task {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 25%;
+}
+
+div.container-edit-task {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 150px;
+    width: 75%;
+    margin-top: 15px;
+    padding-right: 45px;
+}
+
+div.container-options-task button {
+    border: none;
+    background-color: var(--cl-gray-01);
+}
+
+div.container-options-task button:hover {
+    background-color: var(--cl-gray-02);
+}
+
+div.container-options-task label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+}
+
+div.container-task-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.container-task-description label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 0;
+    font-size: var(--font-xl);
+    line-height: var(--font-lg);
+}
+
+div.container-task-description textarea {
+    /* width: 100%; */
+    padding: 15px;
+    margin-left: 35px;
+    resize: none;
+    font-size: var(--font-smd);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cl-gray-01);
+}
+
+div.container-task-description textarea:focus {
+    outline: 0;
+}
+
+div.container-edit-options-task label h6 {
+    font-size: var(--font-smd);
+    color: var(--cl-gray-06);
+}
+
+div.container-options-task label button {
+    justify-content: start;
+    width: 100%
+}
+
+button.button.saved {
+    padding: 0 75px;
+}
+
+button.button.saved:hover {
+    background-color: #6f8c66;
+}
+
+button.button.canceled {
+    padding: 0 20px;
+    background-color: var(--cl-gray-01);
+}
+
+button.button.canceled:hover {
+    color: #fff;
+    background-color: var(--filter-danger);
+}
+
+div.modal#edit-task button.button-filter-status {
+    padding: 0;
+}

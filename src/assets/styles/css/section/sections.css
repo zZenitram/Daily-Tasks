@@ -1,0 +1,279 @@
+main {
+    height: calc(100vh - var(--header-height));
+    width: calc(100vw - var(--sidebar-width));
+    background-color: var(--cl-gray-01);
+}
+
+header.container-header-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: var(--header-task-height);
+    padding: 0 10px;
+    border-bottom: 1px solid var(--cl-gray-02);
+    background-color: var(--cl-gray-00);
+}
+
+header.container-header-pages div.container-title-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: var(--header-task-filters-height);
+}
+
+header.container-header-pages div.container-members-filters {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+header.container-header-pages div.container-members-filters div.container-add-members {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    height: auto;
+}
+
+header.container-header-pages div.container-members-filters div.container-previw-grid-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header.container-header-pages div.container-members-filters div.container-previw-grid-inline>span {
+    font-size: var(--font-xmd);
+    color: #a0a5ac;
+}
+
+header.container-header-pages div.container-members-filters div.container-add-members div.container-section-members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+div.container-members-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-left: 5px;
+}
+
+div.container-members-avatar span {
+    width: 27px;
+    height: 27px;
+    margin-left: -5px;
+    border-radius: 100%;
+}
+
+div.container-members-avatar span.numbers-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    border: 2px solid var(--cl-gray-00);
+    color: var(--cl-gray-09);
+    background-color: var(--cl-gray-02);
+}
+
+div.container-members-avatar span.members-avatar img {
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    border: 2px solid var(--cl-gray-00);
+}
+
+span.title-main-section {
+    font-weight: 500;
+    font-size: var(--font-sm);
+    color: rgba(170, 169, 169, 0.622);
+}
+
+header.container-header-pages div.container-title-filters h1.title-main {
+    font-weight: 600;
+    font-size: var(--font-xl);
+    letter-spacing: -1.2px;
+}
+
+header.container-header-pages div.container-title-filters span.subtitle-main {
+    font-weight: 400;
+    font-size: var(--font-md);
+    color: rgb(170, 169, 169);
+}
+
+nav.container-sections-filtrs-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-task-filters-height);
+    padding: 0 5px 0 10px;
+    border-bottom: 1px solid var(--cl-gray-02);
+    background-color: var(--cl-gray-00);
+}
+
+nav.container-sections-filtrs-list div.container-information-day {
+    width: 300px;
+}
+
+nav.container-sections-filtrs-list div.container-information-day span.information-day {
+    font-size: var(--font-smd);
+    letter-spacing: 0.5px;
+    color: var(--cl-gray-05);
+}
+
+nav.container-sections-filtrs-list div.container-filters-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+    height: var(--header-task-filters-height);
+    width: calc(100% - 300px);
+    padding: 0;
+}
+
+nav.container-sections-filtrs-list div.container-filters-list>i {
+    font-size: var(--font-lg);
+    color: var(--cl-04);
+}
+
+button.button-filter-status {
+    justify-content: space-between !important;
+    width: auto;
+    margin-left: 35px;
+    font-weight: 500;
+    border: none;
+    color: var(--cl-gray-06);
+    background-color: transparent !important;
+}
+
+button.button-filters-list {
+    gap: 5px;
+    height: 31px;
+    padding: 0 10px;
+    border-radius: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: var(--cl-04);
+    background-color: var(--cl-00) !important;
+}
+
+button.button-filters-list:hover {
+    background-color: var(--cl-00) !important;
+}
+
+button.button-filters-list:hover :is(i, span) {
+    color: var(--cl-03) !important;
+}
+
+button.button-filters-list i {
+    font-size: var(--font-md);
+    color: var(--cl-04) !important;
+}
+
+button.button-add-members {
+    height: 30px;
+    font-weight: 600;
+    padding: 0 15px;
+    border-radius: 50px;
+    color: var(--cl-09);
+    background-color: var(--cl-gray-01) !important;
+}
+
+button.button-add-members:hover {
+    color: var(--cl-09);
+    background-color: var(--cl-gray-02) !important;
+}
+
+.switch {
+    display: flex;
+    position: relative;
+    height: 30px;
+    width: 64px;
+}
+
+.switch input {
+    display: none;
+}
+
+div.slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--cl-00);
+    transition: .4s;
+    cursor: pointer;
+}
+
+div.slider i {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 32px;
+    font-size: var(--font-lg);
+    -webkit-font-smoothing: antialiased;
+}
+
+div.slider i.horizontal {
+    left: 0;
+}
+
+div.slider i.vertical {
+    right: 0;
+}
+
+div.slider:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 32px;
+    background-color: var(--cl-gray-03);
+    transition: .4s;
+}
+
+div.slider:hover:before {
+    transition: .4s;
+    color: #fff;
+}
+
+input:not(:checked)+div.slider:hover i.horizontal {
+    transition: .4s;
+    color: #fff;
+}
+
+input:checked+div.slider:hover i.vertical {
+    transition: .4s;
+    color: #fff;
+}
+
+input:not(:checked)+div.slider i.horizontal {
+    transition: 1.0s;
+    color: #fff;
+}
+
+input:checked+div.slider i.vertical {
+    transition: 1.0s;
+    color: #fff;
+}
+
+input:checked+div.slider:before {
+    transform: translateX(32px);
+}
+
+div.slider.round {
+    border-radius: 5px;
+}
+
+div.slider.round:before {
+    border-radius: 2.5px;
+}

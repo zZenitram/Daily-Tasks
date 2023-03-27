@@ -1,0 +1,102 @@
+:is(:root) {
+    /* --header-height: 45px; */
+    --header-height: 0px;
+    --header-task-height: 90px;
+    --header-task-filters-height: 35px;
+
+    --font-xl: 1.5rem;
+    --font-lg: 1.3rem;
+    --font-xmd: 1.15rem;
+    --font-md: 1rem;
+    --font-smd: 0.85rem;
+    --font-sm: 0.7rem;
+    --font-xs: 0.5rem;
+}
+
+@media only screen and (max-width: 993px) {
+    :root {
+        --header-height: 0px;
+        --header-task-height: 0px;
+        --header-task-filters-height: 0px;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :is(:root) {
+        --cl-gray-00: #202124;
+        /* --cl-gray-00: #262626; */
+        --cl-gray-01: #2e2e2e;
+        --cl-gray-02: #3a3a3a;
+        --cl-gray-03: #414141;
+        --cl-gray-04: #676767;
+        --cl-gray-05: #8d8d8d;
+        --cl-gray-06: #b3b3b3;
+        --cl-gray-07: #d9d9d9;
+        --cl-gray-08: #f6f5f8;
+        --cl-gray-09: #e7e7e7;
+        --cl-gray-10: #ffffff;
+
+        /* --cl-00: #414146; */
+        --cl-00: #77A46B;
+        --cl-01: #323536;
+        --cl-02: #36373a;
+        --cl-03: #777c84;
+        --cl-04: #d0d6e1;
+
+        --cl-translucid-00: rgb(29, 29, 29);
+        --cl-translucid-01: rgb(40, 40, 40);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #414141 !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :is(:root) {
+        --cl-gray-10: #262626;
+        --cl-gray-09: #2e2e2e;
+        --cl-gray-08: #3a3a3a;
+        --cl-gray-07: #414141;
+        --cl-gray-06: #676767;
+        --cl-gray-05: #8d8d8d;
+        --cl-gray-04: #b3b3b3;
+        --cl-gray-03: #d9d9d9;
+        --cl-gray-02: #f6f5f8;
+        --cl-gray-01: #fbfafb;
+        --cl-gray-00: #ffffff;
+
+        --cl-00: #f0f2f7;
+        --cl-01: #f6fbff;
+        --cl-02: #dbe2ed;
+        --cl-03: #677182;
+        --cl-04: #8792a4;
+
+        --cl-translucid-00: rgb(241, 241, 241);
+        --cl-translucid-01: rgb(238, 238, 238);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #d9d9d9 !important;
+    }
+}
+
+body {
+    background-color: var(--cl-gray-00) !important;
+    color: var(--cl-gray-07) !important;
+    color-scheme: dark light;
+}

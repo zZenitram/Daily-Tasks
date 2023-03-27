@@ -1,0 +1,88 @@
+<ng-include src="'components/navbars/sidebar/sidebar.html'"></ng-include>
+
+<main>
+    <ng-include src="'components/section/header/header.html'" class="d-none d-lg-block"></ng-include>
+
+    <ng-include src="'components/section/filters/filters.html'" class="d-none d-lg-block"></ng-include>
+
+    <div class="container-all-tasks">
+        <div class="container-edit-tesk" ng-repeat="column in columns track by $index">
+            <div class="container-header-task">
+
+                <button class="button-state-task">
+                    <span>{{column.name}}</span>
+                </button>
+
+                <div class="container-actions">
+
+                    <button class="button-add-task" data-bs-toggle="modal" data-bs-target="#edit-task"
+                        ng-click="get.column(column); get.task(task)">
+                        <i class='bx bx-plus'></i>
+                    </button>
+
+                    <button class="button-options-task">
+                        <i class='bx bx-dots-horizontal-rounded'></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container-main-task" ng-if="(column.tasks || '').length != 0">
+
+                <div class="task" ng-repeat="task in column.tasks track by $index">
+                    <div class="container-label-option">
+                        <div class="container-task-labels">
+                            <i class='bx bxs-circle {{task.label.color}}' style="font-size: 0.9rem;"></i>
+                            <span class="task-labels {{task.label.color}}">{{task.label.name}}</span>
+                        </div>
+
+                        <button class="button-options-edit-task" data-bs-toggle="modal" data-bs-target="#edit-task"
+                            ng-click="get.column(column); get.task(task)">
+                            <i class='bx bx-dots-horizontal-rounded'></i>
+                        </button>
+                    </div>
+
+                    <div class="container-task-main-information" ng-if="(task.name || '').length != 0">
+                        <span class="task-name">{{task.name}}</span>
+                        <button class="task-date {{task.date.status}}" ng-if="(task.date || '').length != 0"><i
+                                class='bx bx-calendar'></i>
+                            {{task.date.month}}
+                            {{task.date.day}}</button>
+                    </div>
+
+                    <label for="task-description-text" ng-if="(task.description || '').length != 0">
+                        <span>Description</span>
+                        <textarea name="description" id="task-description-text" cols="30" rows="10"
+                            class="task-description" spellcheck="false" readonly>{{task.description}}</textarea>
+                    </label>
+
+                    <div class="container-members-avatar" ng-hide="(task.users || []).length == 0"
+                        style="justify-content: start !important;">
+                        <span class="members-avatar" ng-repeat="user in task.users">
+                            <img src="{{user.url}}">
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-button-new-task">
+                <button class="button-new-task" data-bs-toggle="modal" data-bs-target="#edit-task"
+                    ng-click="get.column(column); get.task(task)">
+                    <i class="bx bx-plus"></i>
+                    <span>add new card</span>
+                </button>
+            </div>
+
+            <ng-include src="'components/menus/modals/tasks/task.html'"></ng-include>
+
+        </div>
+
+        <div class="container-new-tesk">
+            <div class="container-header-task">
+                <button class="button-new-column-task" ng-click="set.column()">
+                    <i class="bx bx-plus"></i>
+                    <span>add new column</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
