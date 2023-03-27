@@ -7,8 +7,8 @@ div.container-all-tasks {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url("../../../imgs/Backgrounds/background-one.jpg"); */
-    background-image: url("../../../imgs/Backgrounds/background-two.jpg");
+    background-image: url("../../../imgs/Backgrounds/background-one.jpg");
+    /* background-image: url("../../../imgs/Backgrounds/background-two.jpg"); */
 }
 
 div.container-all-tasks div.container-new-tesk {
